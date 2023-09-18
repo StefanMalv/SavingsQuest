@@ -1,6 +1,6 @@
 SavingsQuest is an innovative savings application that transforms the act of saving money into an exciting and rewarding activity! My mission is to make the journey towards financial stability entertaining and enjoyable.
 
-About SavingsQuest:
+### About SavingsQuest:
 SavingsQuest offers a unique and engaging way to encourage saving while immersing you in a captivating gaming experience. Unlike traditional savings methods, SavingsQuest takes a gamified approach, turning every dollar saved into a valuable resource in your in-game adventure.
 
 Gameplay and Vision:
