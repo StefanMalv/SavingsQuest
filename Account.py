@@ -39,7 +39,8 @@ class GameUser(BankUser):
         self.savingsgoal = savingsgoal
 
     # Saves money to the account balance and saves the transaction to the database
-    def save_money(self, savings_input):
+    def save_money(self):
+        savings_input = int(input("Savings amount: "))
         ratio = 0.01
         
         self.gamebalance = int(self.gamebalance)
@@ -66,7 +67,8 @@ class GameUser(BankUser):
         return game_money_earned, transaction_info
 
     # The user can set a savingsgoal that when reached they get a in game reward
-    def set_goal(self, goal=0):
+    def set_goal(self):
+        goal = int(input("Set savings goal: "))
         reward_ratio = 0.05
         left_of_savingsgoal = goal - self.balance
         
