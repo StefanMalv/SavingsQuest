@@ -1,4 +1,4 @@
-import mysql.connector
+import mysql_dependency.connector as connector
 
 class UserDatabase:
     
@@ -16,10 +16,10 @@ class UserDatabase:
     # Function that connects to my database
     def connect_to_database(self):
         try:
-            # Connect to MySQL server
-            self.conn = mysql.connector.connect(**self.db_config)
+            # Connect to mysql server
+            self.conn = connector.connect(**self.db_config)
             self.cursor = self.conn.cursor()
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
 
     # Creates a database
@@ -34,7 +34,7 @@ class UserDatabase:
             self.cursor.close()
             self.conn.close()
         
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
 
     # Creates a table for storing users
@@ -71,7 +71,7 @@ class UserDatabase:
 
             print("Table 'users' created successfully.")
         
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
     
     # Creates table for storing transactions for storing savings transactions      
@@ -106,7 +106,7 @@ class UserDatabase:
 
             print("Table 'transactions' created successfully.")
         
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
 
     # Funciton for inserting users into the database
@@ -134,7 +134,7 @@ class UserDatabase:
 
             print(f"User data inserted successfully.")
         
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
     
     # Funciton for inserting savings transactions into the database
@@ -156,7 +156,7 @@ class UserDatabase:
             self.cursor.close()
             self.conn.close()
             
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
 
     # Delete a user from the user table
@@ -178,7 +178,7 @@ class UserDatabase:
                 else:
                     print(f"User: {data} not found in the database")
 
-            except mysql.connector.Error as err:
+            except connector.Error as err:
                 print(f"Error: {err}")
 
             finally:
@@ -203,7 +203,7 @@ class UserDatabase:
             
             print("All tables dropped successfully.")
             
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
 
     # Shows all the game users from users table
@@ -222,7 +222,7 @@ class UserDatabase:
             else:
                 return rows
                     
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
 
         finally:
@@ -245,7 +245,7 @@ class UserDatabase:
             else:
                 return rows
                     
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"Error: {err}")
 
         finally:
@@ -269,13 +269,12 @@ class UserDatabase:
                 return False
 
             
-        except mysql.connector.Error as err:
+        except connector.Error as err:
             print(f"{err}")
         
 
 if __name__ == "__main__":
-    run = UserDatabase()
-
+    pass
     
     
     

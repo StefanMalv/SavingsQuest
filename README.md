@@ -39,8 +39,8 @@ Requirements:
 Before using the Game User Application, ensure you have the following requirements installed:
 
 Python 3.x
-MySQL server
-MySQL Connector/Python (Install using pip install mysql-connector-python)
+mysql server
+mysql Connector/Python (Install using pip install mysql-connector-python)
 hashlib (Available in Python standard library)
 Setup
 

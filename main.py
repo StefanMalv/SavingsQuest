@@ -1,6 +1,6 @@
 # Main interface where all functionality is implimented
 # Read README for thurogh istructions on how to use the application
-from Acount import GameUser
+from Account import GameUser
 from Database import UserDatabase
 from signup_login import sign_up, login
 

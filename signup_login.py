@@ -1,6 +1,6 @@
 import hashlib
-import mysql.connector
-from Acount import GameUser
+import mysql_dependency.connector as connector
+from Account import GameUser
 from Database import UserDatabase
 
 ub = UserDatabase()
@@ -67,7 +67,7 @@ def login():
         else:
             return False
     
-    except mysql.connector.Error as err:
+    except connector.Error as err:
         print(f"{err}")
         
     
