@@ -46,10 +46,13 @@ hashlib (Available in Python standard library)
 Setup
 
 ### Run the Application:
-Run the main script to start the Game User Application:
-bash
-Copy code
-python main.py
+I had some trouble packaging the MySQL dependency. The only alternative I came up with was for you to manually
+install the package before running it. So before you run the program, please run:
+
+pip install mysql-connector-python
+
+Afterward, you can run the main function in main.py.
+Hopefully, this will work. Sorry for the inconvenience.
 
 ### Usage
 ### Sign Up:
