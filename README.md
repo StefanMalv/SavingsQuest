@@ -24,18 +24,6 @@ Set savings goals within the game, and when you achieve them, reap in-game rewar
 ### Financial Education: 
 Along the way, you'll gain valuable financial insights and knowledge that will empower you to make better financial decisions in the real world.
 
-### Login: 
-Registered users can log in with their username and password to access their accounts.
-
-### Save Money: 
-Logged-in users can save virtual money to their accounts. The application calculates virtual game money earned based on the amount saved and stores the transaction in the database.
-
-### Set Savings Goal: 
-Users can set savings goals. When the goal is reached, they receive in-game rewards. The application tracks progress toward the goal and notifies users when they've reached it.
-
-### Log Out: 
-Users can log out of their accounts to protect their privacy.
-
 ### Requirements:
 Before using the Game User Application, ensure you have the following requirements installed:
 
@@ -51,8 +39,8 @@ install the package before running it. So before you run the program, please run
 
 pip install mysql-connector-python
 
-Afterward, you can run the main function in main.py.
-Hopefully, this will work. Sorry for the inconvenience.
+Afterward, you can run the main function in main.py
+
 
 ### Usage
 ### Sign Up:
