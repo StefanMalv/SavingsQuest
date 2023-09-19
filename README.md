@@ -68,6 +68,10 @@ Select option 4 from the main menu.
 Enter your savings goal amount.
 The application tracks your progress toward the goal and notifies you when you've reached it.
 
+### Personal Finance Assistant (Chat GPT)
+Ask your persoanl finance assistant anything finance related. This will help the users make better finantional decissions when saving.
+The API only allows a certin amount of questions so after a couple of questions the model will not provide an answer.
+
 ### Log Out:
 To log out and protect your account, select option 5 from the main menu.
 
