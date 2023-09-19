@@ -6,7 +6,6 @@ from signup_login import sign_up, login
 import time
 import openai
 
-openai.api_key = "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"
 gu = GameUser
 ud = UserDatabase()
 
