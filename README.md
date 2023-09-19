@@ -38,6 +38,7 @@ I had some trouble packaging the MySQL dependency and the openai package. The on
 install the package before running it. So before you run the program, please run:
 
 pip install mysql-connector-python
+
 pip install openai
 
 Afterward, you can run the main function in main.py
