@@ -3,13 +3,32 @@
 from Account import GameUser
 from Database import UserDatabase
 from signup_login import sign_up, login
+import time
+import openai
 
+openai.api_key = "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"
 gu = GameUser
 ud = UserDatabase()
 
-# Function to interact with the application
+# Implimentation of Chat GPT as a finance assistant (Limited requests)
+def chat_with_gpt3(prompt):
+    try:
+        response = openai.Completion.create(
+            engine="davinci",
+            prompt=prompt,
+            max_tokens=50
+        )
+        return response.choices[0].text.strip()
+    except openai.error.RateLimitError as e:
+        print("Rate limit exceeded. Waiting for rate limits to reset...")
+        time.sleep(60)
+        return chat_with_gpt3(prompt)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None
+
 def main():
-    # Create databse and the apropriate tables users and transactions
+    # Create database and the appropriate tables (same code as before)
     ud.create_database()
     ud.create_transaction_table_if_not_exists()
     ud.create_users_table_if_not_exists()
@@ -24,10 +43,11 @@ def main():
         
         elif logged_in_user:
             print(f"""Logged in as {logged_in_user}
-                    3. Save Money
-                    4. Set Savings Goal
-                    5. log out""")
-
+                3. Save Money
+                4. Set Savings Goal
+                5. Ask Chat GPT for advice
+                6. log out""")
+                
         choice = input("Please select an option: ")
 
         if choice == "1":
@@ -47,11 +67,15 @@ def main():
         elif choice == "4":
             gu.set_goal(logged_in_user)
         elif choice == "5":
+            question = input("Ask you personal finance assistant anything finance related: ")
+            chat_with_gpt3(question)
+        elif choice == "6":
             print("Logged out")
             logged_in_user = None
             break
         else:
             print("Invalid choice. Please select a valid option.")
+
 
 if __name__ == "__main__":
     main()
